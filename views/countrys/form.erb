@@ -1,24 +1,29 @@
-<form class="" action="/<%= @country.id %>" method="POST">
-  <div class="">
-    <label for="">Country</label>
-    <input type="text" name="country" placeholder="Country's Name" value="<%= @country.country %>">
-  </div>
+<div class="form-style row">
+  <div class="col-md-4 col-md-offset-4">
 
-  <div class="">
-    <label for="">Population</label>
-    <textarea name="population" placeholder="e.g. 65000000 "><%= @country.population %></textarea>
-  </div>
+    <form class="" action="/<%= @country.id %>" method="POST">
+      <div class="top-margin">
+        <label>Country</label>
+        <input class="center-block" type="text" name="country" placeholder="Country's Name" value="<%= @country.country %>">
+      </div>
 
-  <div class="">
-    <label for="">GDP</label>
-    <textarea name="gdp" placeholder="e.g 2.6 trillion"><%= @country.gdp %></textarea>
-  </div>
+      <div class="top-margin">
+        <label>Population</label>
+        <input class="center-block" type="text" name="population" placeholder="e.g. 65 million" value="<%= @country.population %>">
+      </div>
 
-  <div class="">
-    <input type="submit" name="" value="Save Country">
-  </div>
+      <div class="top-margin">
+        <label>GDP</label>
+        <input class="center-block" type="text" name="gdp" placeholder="e.g 2.6 trillion" value="<%= @country.gdp %>">
+      </div>
 
-  <% if(@country.id) %>
-    <input type="hidden" name="_method" value="PUT">
-  <% end %>
-</form>
+      <div class="top-margin">
+        <input class="center-block" type="submit" name="" value="Save Country">
+      </div>
+
+      <% if(@country.id) %>
+      <input type="hidden" name="_method" value="PUT">
+      <% end %>
+    </form>
+  </div>
+</div>

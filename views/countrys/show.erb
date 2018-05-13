@@ -1,8 +1,13 @@
-<h1><%= @country.country %></h1>
-<p><%= @country.population %></p>
-<p><%= @country.gdp %></p>
 
-<form action="/<%= @country.id %>" method="POST">
-  <input type="hidden" name="_method" value="DELETE">
-  <input type="submit" value="DELETE">
-</form>
+<div class="row form-style">
+  <div class="col-md-4 col-md-offset-4">
+    <h1 class="top-margin"><%= @country.country %></h1>
+    <p class="top-margin"><Strong>Population | </strong><%= @country.population %></p>
+    <p class="top-margin"><strong>GDP | </strong><%= @country.gdp %></p>
+
+    <form class="top-margin" action="/<%= @country.id %>" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="DELETE">
+    </form>
+  </div>
+</div>
