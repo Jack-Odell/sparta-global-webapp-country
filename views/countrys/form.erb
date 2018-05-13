@@ -1,0 +1,24 @@
+<form class="" action="/<%= @country.id %>" method="POST">
+  <div class="">
+    <label for="">Country</label>
+    <input type="text" name="country" placeholder="Country's Name" value="<%= @country.country %>">
+  </div>
+
+  <div class="">
+    <label for="">Population</label>
+    <textarea name="population" placeholder="e.g. 65000000 "><%= @country.population %></textarea>
+  </div>
+
+  <div class="">
+    <label for="">GDP</label>
+    <textarea name="gdp" placeholder="e.g 2.6 trillion"><%= @country.gdp %></textarea>
+  </div>
+
+  <div class="">
+    <input type="submit" name="" value="Save Country">
+  </div>
+
+  <% if(@country.id) %>
+    <input type="hidden" name="_method" value="PUT">
+  <% end %>
+</form>

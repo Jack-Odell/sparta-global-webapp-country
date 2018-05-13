@@ -1,0 +1,8 @@
+<h1><%= @country.country %></h1>
+<p><%= @country.population %></p>
+<p><%= @country.gdp %></p>
+
+<form action="/<%= @country.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="DELETE">
+</form>
